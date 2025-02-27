@@ -54,7 +54,7 @@ app.post("/submit", async (req, res) => {
         // Create a new enrollment with the form data, including the timestamp
         const newEnrollment = new Enrollment(req.body);
         await newEnrollment.save();
-        res.status(200).json({ message: "Enrollment successful!" });
+        res.status(200).json({ message: "Enrollment successful we will contact you shortly" });
     } catch (error) {
         res.status(500).json({ message: "Error processing enrollment." });
     }
