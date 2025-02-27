@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ace Academy - Online School</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Ace Academy</h1>
+        <p>In Collaboration with T.S & Recognized Academy by T.S</p>
+      </header>
+    
+      <!-- Navigation bar -->
+      <nav>
+        <div class="container">
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#login">Student Login</a></li>
+          <li><a href="#enroll">Enroll in Class</a></li>
+          <li><a href="#apply">Apply to Teach</a></li>
+          <li><a href="#Contact Us">Contact Us</a></li>
+        </ul>
+        <div>
+      </nav>
+    
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Ace Academy</h2>
+        <p>Ace Academy is an online school in collaboration with the Telangana Government Organization.  It provides a strong foundation for future success through its online education programs.</p>
+        <p>We have experienced and qualified tutors who mentor each student according to their individual capabilities. Our 1:1 teacher-student ratio ensures personalized attention and minimizes distractions.</p>
+        <p>We follow the British Curriculum for students up to Nursery from to Intermediate 2 year, we use the books published by the State Council of Educational Research and Training (SCERT) of Telangana. Telugu is a compulsory subject, with an option to choose between Urdu and Hindi.</p>
+        <p>Our curriculum is designed to enhance students' growth by prioritizing and creating more opportunities for learning. Ace Academy is more than just an online school; it's a partner in your child's educational journey. Together with our experienced tutors, supportive community,</p>
+        <p>and comprehensive curriculum,  we aim to unlock your child's full potential and set them on a path to success.</p>
+      </section>
+    
+      <!-- Student Login Section -->
+      <section id="login">
+        <h2>Student Login</h2>
+        <p>Student Login functionality is currently under development. Please check back soon!</p>
+      </section>
+
+      <!-- Student Enrollment Section -->
+      <section id="enroll">
+        <h2>Enroll in Class</h2>
+        <form id="enrollmentForm">
+    
+            <h3>Student Information</h3>
+            <div id="Student"></div>
+              <label for="studentName">Student’s Name :</label>
+              <input type="text" id="studentName" name="studentName" required>
+        
+              <label for="dob">Date of Birth (MM/DD/YY):</label>
+              <input type="date" id="studentDob" name="dob" required>
+             
+              <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <div class="radio-option">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+              
+              <label for="address">Residential Address:</label>
+              <input type="text" id="studentResidentialAddress" name="address" required>
+        
+              <label for="city">City:</label>
+              <input type="text" id="studentcity" name="city" required>
+        
+              <label for="state">State:</label>
+              <input type="text" id="studentstate" name="state" required>
+        
+              <label for="country">Country:</label>
+              <input type="text" id="studentcountry" name="country" required>
+        
+              <h3>Parent/Guardian Information</h3>
+              <label for="fatherName">Father’s Name:</label>
+              <input type="text" id="fatherName" name="fatherName" required>
+        
+              <label for="fatherQualification">Qualifications:</label>
+              <input type="text" id="fatherQualification" name="fatherQualification" required>
+        
+              <label for="fatherOccupation">Occupation:</label>
+              <input type="text" id="fatherOccupation" name="fatherOccupation" required>
+        
+              <label for="motherName">Mother’s Name:</label>
+              <input type="text" id="motherName" name="motherName" required>
+        
+              <label for="motherQualification">Qualifications:</label>
+              <input type="text" id="motherQualification" name="motherQualification" required>
+        
+              <label for="motherOccupation">Occupation:</label>
+              <input type="text" id="motherOccupation" name="motherOccupation" required>
+        
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required>
+                  
+  <style>
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .country-code-select {
+      width: 1%;
+      margin-right: 10rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <div>
+      <select id="countryCode" name="countryCode" class="country-code-select">
+        <option value="+93">🇦🇫 Afghanistan (+93)</option>
+        <option value="+355">🇦🇱 Albania (+355)</option>
+        <option value="+213">🇩🇿 Algeria (+213)</option>
+        <option value="+376">🇦🇩 Andorra (+376)</option>
+        <option value="+244">🇦🇴 Angola (+244)</option>
+        <option value="+54">🇦🇷 Argentina (+54)</option>
+        <option value="+374">🇦🇲 Armenia (+374)</option>
+        <option value="+61">🇦🇺 Australia (+61)</option>
+        <option value="+43">🇦🇹 Austria (+43)</option>
+        <option value="+994">🇦🇿 Azerbaijan (+994)</option>
+        <option value="+973">🇧🇭 Bahrain (+973)</option>
+        <option value="+880">🇧🇩 Bangladesh (+880)</option>
+        <option value="+375">🇧🇾 Belarus (+375)</option>
+        <option value="+32">🇧🇪 Belgium (+32)</option>
+        <option value="+975">🇧🇹 Bhutan (+975)</option>
+        <option value="+591">🇧🇴 Bolivia (+591)</option>
+        <option value="+387">🇧🇦 Bosnia and Herzegovina (+387)</option>
+        <option value="+267">🇧🇼 Botswana (+267)</option>
+        <option value="+55">🇧🇷 Brazil (+55)</option>
+        <option value="+359">🇧🇬 Bulgaria (+359)</option>
+        <option value="+226">🇧🇫 Burkina Faso (+226)</option>
+        <option value="+257">🇧🇮 Burundi (+257)</option>
+        <option value="+855">🇰🇭 Cambodia (+855)</option>
+        <option value="+237">🇨🇲 Cameroon (+237)</option>
+        <option value="+1">🇨🇦 Canada (+1)</option>
+        <option value="+238">🇨🇻 Cape Verde (+238)</option>
+        <option value="+236">🇨🇫 Central African Republic (+236)</option>
+        <option value="+235">🇹🇩 Chad (+235)</option>
+        <option value="+56">🇨🇱 Chile (+56)</option>
+        <option value="+86">🇨🇳 China (+86)</option>
+        <option value="+57">🇨🇴 Colombia (+57)</option>
+        <option value="+269">🇰🇲 Comoros (+269)</option>
+        <option value="+506">🇨🇷 Costa Rica (+506)</option>
+        <option value="+385">🇭🇷 Croatia (+385)</option>
+        <option value="+53">🇨🇺 Cuba (+53)</option>
+        <option value="+357">🇨🇾 Cyprus (+357)</option>
+        <option value="+420">🇨🇿 Czech Republic (+420)</option>
+        <option value="+45">🇩🇰 Denmark (+45)</option>
+        <option value="+253">🇩🇯 Djibouti (+253)</option>
+        <option value="+1">🇩🇴 Dominican Republic (+1)</option>
+        <option value="+593">🇪🇨 Ecuador (+593)</option>
+        <option value="+20">🇪🇬 Egypt (+20)</option>
+        <option value="+503">🇸🇻 El Salvador (+503)</option>
+        <option value="+372">🇪🇪 Estonia (+372)</option>
+        <option value="+251">🇪🇹 Ethiopia (+251)</option>
+        <option value="+679">🇫🇯 Fiji (+679)</option>
+        <option value="+358">🇫🇮 Finland (+358)</option>
+        <option value="+33">🇫🇷 France (+33)</option>
+        <option value="+241">🇬🇦 Gabon (+241)</option>
+        <option value="+995">🇬🇪 Georgia (+995)</option>
+        <option value="+49">🇩🇪 Germany (+49)</option>
+        <option value="+233">🇬🇭 Ghana (+233)</option>
+        <option value="+30">🇬🇷 Greece (+30)</option>
+        <option value="+502">🇬🇹 Guatemala (+502)</option>
+        <option value="+224">🇬🇳 Guinea (+224)</option>
+        <option value="+592">🇬🇾 Guyana (+592)</option>
+        <option value="+509">🇭🇹 Haiti (+509)</option>
+        <option value="+504">🇭🇳 Honduras (+504)</option>
+        <option value="+36">🇭🇺 Hungary (+36)</option>
+        <option value="+354">🇮🇸 Iceland (+354)</option>
+        <option value="+91">🇮🇳 India (+91)</option>
+        <option value="+62">🇮🇩 Indonesia (+62)</option>
+        <option value="+98">🇮🇷 Iran (+98)</option>
+        <option value="+964">🇮🇶 Iraq (+964)</option>
+        <option value="+353">🇮🇪 Ireland (+353)</option>
+        <option value="+39">🇮🇹 Italy (+39)</option>
+        <option value="+81">🇯🇵 Japan (+81)</option>
+        <option value="+962">🇯🇴 Jordan (+962)</option>
+        <option value="+7">🇰🇿 Kazakhstan (+7)</option>
+        <option value="+254">🇰🇪 Kenya (+254)</option>
+        <option value="+965">🇰🇼 Kuwait (+965)</option>
+        <option value="+996">🇰🇬 Kyrgyzstan (+996)</option>
+        <option value="+856">🇱🇦 Laos (+856)</option>
+        <option value="+961">🇱🇧 Lebanon (+961)</option>
+        <option value="+218">🇱🇾 Libya (+218)</option>
+        <option value="+352">🇱🇺 Luxembourg (+352)</option>
+        <option value="+261">🇲🇬 Madagascar (+261)</option>
+        <option value="+60">🇲🇾 Malaysia (+60)</option>
+        <option value="+960">🇲🇻 Maldives (+960)</option>
+        <option value="+223">🇲🇱 Mali (+223)</option>
+        <option value="+356">🇲🇹 Malta (+356)</option>
+        <option value="+230">🇲🇺 Mauritius (+230)</option>
+        <option value="+52">🇲🇽 Mexico (+52)</option>
+        <option value="+212">🇲🇦 Morocco (+212)</option>
+        <option value="+95">🇲🇲 Myanmar (+95)</option>
+        <option value="+264">🇳🇦 Namibia (+264)</option>
+        <option value="+977">🇳🇵 Nepal (+977)</option>
+        <option value="+31">🇳🇱 Netherlands (+31)</option>
+        <option value="+64">🇳🇿 New Zealand (+64)</option>
+        <option value="+234">🇳🇬 Nigeria (+234)</option>
+        <option value="+47">🇳🇴 Norway (+47)</option>
+        <option value="+968">🇴🇲 Oman (+968)</option>
+        <option value="+92">🇵🇰 Pakistan (+92)</option>
+        <option value="+63">🇵🇭 Philippines (+63)</option>
+        <option value="+48">🇵🇱 Poland (+48)</option>
+        <option value="+351">🇵🇹 Portugal (+351)</option>
+        <option value="+974">🇶🇦 Qatar (+974)</option>
+        <option value="+40">🇷🇴 Romania (+40)</option>
+        <option value="+7">🇷🇺 Russia (+7)</option>
+        <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+        <option value="+65">🇸🇬 Singapore (+65)</option>
+        <option value="+27">🇿🇦 South Africa (+27)</option>
+        <option value="+82">🇰🇷 South Korea (+82)</option>
+        <option value="+34">🇪🇸 Spain (+34)</option>
+        <option value="+94">🇱🇰 Sri Lanka (+94)</option>
+        <option value="+46">🇸🇪 Sweden (+46)</option>
+        <option value="+41">🇨🇭 Switzerland (+41)</option>
+        <option value="+66">🇹🇭 Thailand (+66)</option>
+        <option value="+90">🇹🇷 Turkey (+90)</option>
+        <option value="+380">🇺🇦 Ukraine (+380)</option>
+        <option value="+44">🇬🇧 United Kingdom (+44)</option>
+        <option value="+1">🇺🇸 United States (+1)</option>
+        <option value="+58">🇻🇪 Venezuela (+58)</option>
+        <option value="+84">🇻🇳 Vietnam (+84)</option>
+        <option value="+967">🇾🇪 Yemen (+967)</option>
+        <option value="+263">🇿🇼 Zimbabwe (+263)</option>
+      </select>
+      <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+    </div>
+  </div>
+                    <h3>Previous Academic Year Details</h3>
+                    <label for="previousSchool">Name of Previous School:</label>
+                    <input type="text" id="previousSchool" name="previousSchool" required>
+              
+                    <label for="lastClass">Last Class Attended:</label>
+                    <input type="text" id="lastClass" name="lastClass" required>
+              
+                    <label for="admissionClass">Seeking Admission in Class:</label>
+                    <input type="text" id="admissionClass" name="admissionClass" required>
+              
+                    <label for="percentage">Percentage/Grade Scored:</label>
+                    <input type="text" id="percentage" name="percentage" required>
+                <button type="submit">Submit</button>
+                <P> For any inquiry <a href="#Contact Us">Contact Us</a> </P>
+              </form>
+              <div id="enrollmentMessage" class="message" hidden></div>
+            </section>
+
+      <!-- Teacher Application Section -->
+      <section id="apply">
+        <h2>Apply to Teach</h2>
+        <p>The Apply for teacher functionality is under development. Please check back soon! </p>
+       <P> For any inquiry <a href="#Contact Us">Contact Us</a> </P>
+      </section>
+    
+            <!-- <h3>Personal Information</h3>
+            <label for="Name">Name:</label>
+            <input type="text" id="Name" name="Name" required>
+        
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required> Male
+            <input type="radio" id="female" name="gender" value="Female" required> Female
+        
+            <label for="dob">Date of Birth (MM/DD/YY):</label>
+            <input type="text" id="dob" name="dob" required>
+        
+            <label for="contactNumber">Contact Number:</label>
+            <input type="tel" id="contactNumber" name="contactNumber" required>
+        
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+        
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+        
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+        
+            <label for="address">Residential Address:</label>
+            <input type="text" id="address" name="address" required>
+        
+            <h3>Professional Details</h3>
+            <label for="highestQualification">Highest Qualification:</label>
+            <input type="text" id="highestQualification" name="highestQualification" required>
+        
+            <label for="specialization">Specialization/Subject Expertise:</label>
+            <input type="text" id="specialization" name="specialization" required>
+        
+            <label for="teachingExperience">Years of Teaching Experience:</label>
+            <input type="text" id="teachingExperience" name="teachingExperience" required>
+        
+            <label for="previousSchool">Previous School/Institution:</label>
+            <input type="text" id="previousSchool" name="previousSchool" required>
+        
+            <h3>Curriculum & Grade Preferences</h3>
+            <label for="preferredCurriculum">Preferred Curriculum:</label>
+            <select id="preferredCurriculum" name="preferredCurriculum" required>
+              <option value="">Select Curriculum</option>
+              <option value="British (Grades 1–5)">British (Grades 1–5)</option>
+              <option value="SCERT Telangana (Grades 6–10)">SCERT Telangana (Grades 6–10)</option>
+            </select>
+        
+            <label for="preferredGrades">Preferred Grades to Teach:</label>
+            <input type="text" id="preferredGrades" name="preferredGrades" required>
+        
+            <h3>Additional Information</h3>
+            <label for="reasonToJoin">Why do you want to join Ace Academy? (Short paragraph):</label>
+            <textarea id="reasonToJoin" name="reasonToJoin" rows="4" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+        <div id="teacherMessage" class="message" hidden></div> -->
+      
+ <!-- Contact Section -->
+<section id="Contact Us">
+  <h2>Contact Us:</h2>
+  <p class="mail-link">
+    <a href="mailto:academya467@gmail.com" target="_blank">
+      <i class="fa-regular fa-envelope"></i>
+      <span>academya467@gmail.com</span>
+    </a>
+  </p>
+    <p class="social-link">
+      <a href="https://www.instagram.com/ace_academy2024/" target="_blank">
+        <i class="fab fa-instagram"></i> ace_academy2024
+      </a>
+    </p>
+      <p class="phone-link">
+        <a href="tel:+918008691258">
+          <i class="fa-solid fa-phone"></i>
+          <span>India: +91 80086 91258</span>
+        </a>
+      </p>
+      <p class="phone-link">
+        <a href="tel:+966532785947">
+          <i class="fa-solid fa-phone"></i>
+          <span>KSA: +966 53 278 5947</span>
+        </a>
+      </p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Ace Academy. All rights reserved.</p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script> 
+    $(document).ready(function () {
+      // Initialize Select2
+      $('.country-code-select').select2({
+        placeholder: "Search for a country...",
+        allowClear: true,
+        width: '18%',
+        language: {
+          noResults: function () {
+            return "What?";
+          }
+        }
+      });
+
+      // Add custom placeholder text when dropdown is opened
+      $('.country-code-select').on('select2:open', function () {
+        // Find the search input inside the dropdown
+        const searchInput = document.querySelector('.select2-search__field');
+        
+        // Update the placeholder text
+        if (searchInput) {
+          searchInput.placeholder = "Isreal is not a country💩";
+        }
+      });
+      // Reset the placeholder when dropdown is closed
+      $('.country-code-select').on('select2:close', function () {
+        const searchInput = document.querySelector('.select2-search__field');
+        if (searchInput) {
+          searchInput.placeholder = ""; // Clear the placeholder
+        }
+      });
+    });
+  </script>
+   <script src="script.js" defer></script>
+  <Main>
+</body>
+</html>
